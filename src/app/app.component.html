@@ -1,15 +1,15 @@
 
 <table *ngFor="let appartement of appartements">
   <tr>
-    <td>id</td>
+    <td>Id</td>
     <td>{{appartement._id}}</td>
   </tr>
   <tr>
-    <td>date creation</td>
+    <td>Date creation</td>
     <td>{{appartement.activite.date_creation}}</td>
   </tr>
   <tr>
-    <td>date de derniers modification</td>
+    <td>Date de derniers modification</td>
     <td>{{appartement.activite.date_derniere_modification}}</td>
   </tr>
  <tr>
@@ -33,137 +33,195 @@
     </td>
   </tr>
   <tr>
-    <td>usage precedent</td>
+    <td>Usage precedent</td>
     <td>{{appartement.general.usage_precedent}}
     </td>
   </tr>
   <tr>
-    <td>reference</td>
+    <td>Reference</td>
     <td>{{appartement.general.ref}}
     </td>
   </tr>
   <tr>
-    <td>Statut a louer?</td>
+    <td>Statut a vendre</td>
+    <td>{{appartement.statut.a_vendre}}</td>
+  </tr>
+  <tr>
+    <td>Statut a louer</td>
     <td>{{appartement.statut.a_louer}}</td>
   </tr>
   <tr>
-    <td>statut de publication</td>
+    <td>Statut de publication</td>
     <td>{{appartement.statut.statut_publication}}</td>
   </tr>
   <tr>
-    <td>statut de disponibilite</td>
+    <td>Statut de disponibilite</td>
     <td>{{appartement.statut.disponibilite}}</td>
   </tr>
-
-   <!-- </tr>
-    <td>
-      {{appartement.charges_taxes.taxe.bureaux.annuelle_m2}}
-    </td>
-  </tr> -->
   <tr>
-    <td>modalites visite</td>
+    <td>Impot foncier annuel en m2</td>
+    <td>
+      {{appartement.charges_taxes?.impot_foncier?.annuel_m2}}
+    </td>
+  </tr>
+  <tr>
+    <td>Charge et taxe bureau annuelle en m2</td>
+    <td>
+      {{appartement.charges_taxes?.taxe?.bureaux?.annuelle_m2}}
+    </td>
+  </tr> 
+  <tr>
+    <td>Modalites visite</td>
     <td>{{ appartement.interne.modalites_visite }}</td>
   </tr>
   <tr>
-    <td>type isolation</td>
-    <td>{{ appartement.caracteristiques.type_isolation }}</td>
+    <td>Commentaire</td>
+    <td>{{appartement.interne.commentaire}}</td>
   </tr>
   <tr>
-    <td>type eclairage</td>
+    <td>Type consctrution</td>
+    <td>{{ appartement.caracteristiques.type_construction }}</td>
+  </tr>
+  <tr>
+    <td>Type d'eclairage</td>
     <td>{{ appartement.caracteristiques.type_eclairage }}</td>
   </tr>
   <tr>
-    <td>entrepot isole</td>
+    <td>Type d'isolation</td>
+    <td>{{ appartement.caracteristiques.type_isolation}}</td>
+  </tr>
+  <tr>
+    <td>Entrepot isole</td>
     <td>{{ appartement.caracteristiques.entrepot_isole }}</td>
   </tr>
   <tr>
-    <td>pont roulant</td>
+    <td>Pont roulant</td>
     <td>{{ appartement.caracteristiques.pont_roulant }}</td>
   </tr>
   <tr>
-    <td>toiture type</td>
+    <td>Toiture type</td>
     <td>{{ appartement.caracteristiques.toiture.type }}</td>
   </tr>
   <tr>
-    <td>toiture isolee</td>
+    <td>Toiture isolee</td>
     <td>{{ appartement.caracteristiques.toiture.isolee }}</td>
   </tr>
   <tr>
-    <td>hauteur</td>
+    <td>Hauteur min</td>
     <td>{{ appartement.caracteristiques.hauteur.min }}</td>
   </tr>
   <tr>
-    <td>hauteur</td>
+    <td>Hauteur max</td>
     <td>{{ appartement.caracteristiques.hauteur.max }}</td>
   </tr>
   <tr>
-    <td>acces</td>
+    <td>Charge au sol</td>
+    <td>{{ appartement.caracteristiques.charge_sol }}</td>
+  </tr>
+  <tr>
+    <td>Commentaire activite</td>
+    <td>{{ appartement.caracteristiques.commentaire_activite }}</td>
+  </tr>
+  <tr>
+    <td>dpe</td>
+    <td>{{ appartement.caracteristiques.dpe }}</td>
+  </tr>
+  <tr>
+    <td>Acces</td>
     <td>{{ appartement.caracteristiques.acces?.plain_pied }}</td>
   </tr>
   <tr>
-    <td>quai</td>
+    <td>Quai</td>
     <td>{{ appartement.caracteristiques.acces?.quai }}</td>
   </tr>
   <tr>
-    <td>parkings pl</td>
+    <td>Parkings pl</td>
     <td>{{ appartement.caracteristiques.parkings?.pl }}</td>
   </tr>
   <tr>
-    <td>parkings vl</td>
+    <td>Parkings vl</td>
     <td>{{ appartement.caracteristiques.parkings?.vl }}</td>
   </tr>
   <tr>
-    <td>type chauffage</td>
+    <td>Type chauffage</td>
     <td>{{ appartement.caracteristiques.chauffage?.type }}</td>
   </tr>
   <tr>
-    <td>chauffage source</td>
+    <td>Chauffage source</td>
     <td>{{ appartement.caracteristiques.chauffage?.source }}</td>
   </tr>
   <tr>
-    <td>type de chauffage </td>
+    <td>traitement </td>
+    <td>{{ appartement.caracteristiques.bureau?.traitement }}</td>
+  </tr>
+  <tr>
+    <td>Type de chauffage </td>
     <td>{{ appartement.caracteristiques.bureau?.type_chauffage }}</td>
   </tr>
   <tr>
-    <td>climatisation</td>
+    <td>Climatisation</td>
     <td>{{ appartement.caracteristiques.bureau?.climatisation }}</td>
   </tr>
   <tr>
-    <td>loyer annuel</td>
+    <td>Loyer annuel</td>
     <td>{{appartement.location?.loyer_annuel?.ht_hc}}</td>
   </tr>
   <tr>
-    <td>regime fiscal</td>
+    <td>Regime fiscal</td>
     <td>{{appartement.location?.regime_fiscal}}</td>
   </tr>
   <tr>
-    <td>type bail</td>
+    <td>Type bail</td>
     <td>{{appartement.location?.type_bail}}</td>
   </tr>
   <tr>
-    <td>depot garantie</td>
+    <td>Depot garantie</td>
     <td>{{appartement.location?.depot_garantie}}</td>
   </tr>
   <tr>
-    <td>mode paiement</td>
+    <td>Mode paiement</td>
     <td>{{appartement.location?.mode_paiement}}</td>
   </tr>
   <tr>
-    <td>article 606</td>
+    <td>Article 606</td>
     <td>{{appartement.location?.article_606}}</td>
   </tr>
   <tr>
-    <td>impot foncier</td>
+    <td>Impot foncier</td>
     <td>{{appartement.location?.impot_foncier}}</td>
   </tr>
   <tr>
-    <td>honoraires hors tva preneur</td>
+    <td>Honoraires hors tva preneur</td>
     <td>{{appartement.location?.honoraires_hors_tva?.preneur}}</td>
   </tr>
   <tr>
-    <td>type de mandat</td>
+    <td>Prix de Vente</td>
+    <td>{{appartement.vente?.prix}}</td>
+  </tr>
+  <tr>
+    <td>Prix m2</td>
+    <td>{{appartement.vente?.prix_m2}}</td>
+  </tr>
+  <tr>
+    <td>Regime_fiscal</td>
+    <td>{{appartement.vente?.regime_fiscal}}</td>
+  </tr>
+  <tr>
+    <td>Mandant</td>
+    <td>{{appartement.vente?.honoraires_hors_tva?.mandant}}</td>
+  </tr>
+  <tr>
+    <td>Preneur</td>
+    <td>{{appartement.vente?.honoraires_hors_tva?.preneur}}</td>
+  </tr>
+  <tr>
+    <td>Type de mandat</td>
     <td>{{appartement.mandat?.type}}</td>
   </tr>
-
+  <tr>
+    <td>Numéro de mandat</td>
+    <td>{{appartement.mandat?.numero}}</td>
+  </tr>
+  <tr>
 </table>
 

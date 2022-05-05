@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Adelios } from './models/adelios.model';
-//let datas = require('./../assets/data_test');
 
 @Component({
   selector: 'app-root',
@@ -10,15 +9,10 @@ import { Adelios } from './models/adelios.model';
 
 
 export class AppComponent implements OnInit {
-  appartements!: Adelios[];    
+  appartements!: Adelios[];
+ 
   ngOnInit() {
-
-   
-    /*console.log('test1')
-    console.log("test2")
-    this.appartements = datas.data_test
-    console.log("test3")*/
-    this.appartements = [
+    this.appartements= [
       {
         _id: "5ca75fedf829040e4d84d15b",
          activite: {
@@ -39,7 +33,7 @@ export class AppComponent implements OnInit {
           statut_publication: "Archive",
           disponibilite: "immédiate",
         },
-        //charges_taxes: { taxe: { bureaux: { annuelle_m2: 3.2 } } },
+        charges_taxes: { taxe: { bureaux: { annuelle_m2: 3.2 } } },
         interne: { modalites_visite: "appel Kerhervé" },
         caracteristiques: {
           type_construction: "Structure béton",
@@ -65,23 +59,6 @@ export class AppComponent implements OnInit {
           honoraires_hors_tva: { preneur: 15 },
         },
         mandat: { type: "Simple" },
-        /*surfaces: [
-          {
-            niveau: 0,
-            type: "Entrepôt",
-            superficie: 900,
-          },
-          {
-            niveau: 0,
-            type: "Bureaux",
-            superficie: 150,
-          },
-          {
-            niveau: 1,
-            type: "Bureaux",
-            superficie: 150,
-          },
-        ] */
         }, 
         {
           _id: "5ca75fedf829040e4d84d163",
@@ -137,53 +114,6 @@ export class AppComponent implements OnInit {
               preneur: 15,
             },
           },
-          /*surfaces: [
-            {
-              niveau: -1,
-              type: "Entrepôt",
-              superficie: 4153,
-            },
-            {
-              niveau: -1,
-              type: "Bureaux",
-              superficie: 277,
-            },
-            {
-              niveau: 0,
-              type: "Entrepôt",
-              superficie: 4153,
-            },
-            {
-              niveau: 0,
-              type: "Bureaux",
-              superficie: 111,
-            },
-            {
-              niveau: 1,
-              type: "Entrepôt",
-              superficie: 4153,
-            },
-            {
-              niveau: 1,
-              type: "Bureaux",
-              superficie: 111,
-            },
-            {
-              niveau: 2,
-              type: "Bureaux",
-              superficie: 111,
-            },
-            {
-              niveau: 3,
-              type: "Bureaux",
-              superficie: 111,
-            },
-            {
-              niveau: 4,
-              type: "Bureaux",
-              superficie: 111,
-            },
-          ],*/
         },
         {
           _id: "5ca75feef829040e4d84d290",
@@ -233,23 +163,6 @@ export class AppComponent implements OnInit {
             numero: "2011",
             type: "Simple",
           },
-          /*surfaces: [
-            {
-              niveau: 0,
-              type: "Entrepôt",
-              superficie: 294,
-            },
-            {
-              niveau: 0,
-              type: "Bureaux",
-              superficie: 38,
-            },
-            {
-              niveau: 1,
-              type: "Bureaux",
-              superficie: 79,
-            },
-          ],*/
       }
     ]
 

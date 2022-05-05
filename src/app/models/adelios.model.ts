@@ -9,8 +9,13 @@ caracteristiques!: Caracteristiques;
 location?: Location;
 vente?: Vente;
 mandat?: Mandat;
-//surfaces?: Surfaces;
 }
+export class ToutSurfaces{
+    niveau!: number;
+    type!: string;
+    superficie?: number;
+  }
+  
 class Activite{
     date_creation!: string;
     date_derniere_modification! : string;
@@ -33,11 +38,7 @@ class Statut{
 }
 
 class Charges_Taxes{
-    static  taxe = class Taxe{
-       static bureaux =  class Bureaux {
-        annuelle_m2!:  string;
-        }
-    }
+    taxe?: { bureaux:{ annuelle_m2: number }}
     impot_foncier?: {annuel_m2: number};
 }
 class Interne{
@@ -84,10 +85,4 @@ class Vente{
 class Mandat{
     type!: string;
     numero?: string;
-}
-
-class Surfaces{
-  niveau?: number;
-  type?: string;
-  superficie?: number;
 }
